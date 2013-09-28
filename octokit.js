@@ -318,10 +318,9 @@
               }
               return _request('GET', "/users/" + _username + "/events" + isPublic, null);
             };
-          }
-          
-          User.getPage = function(i) {
-            return _request('GET', 'search/users?q=language:java&per_page=100&page=' + i, null);
+            this.getPage = function(i) {
+              return _request('GET', 'search/users?q=language:java&per_page=100&page=' + i, null);
+            };
           }
 
           return User;
